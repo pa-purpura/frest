@@ -39,19 +39,19 @@
     <link rel="stylesheet" href="{{ asset('assets/vendor/libs/typeahead-js/typeahead.css') }}" />
     <link rel="stylesheet" href="{{ asset('assets/vendor/libs/apex-charts/apex-charts.css') }}" />
 
-    <link rel="stylesheet" href="../../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
+    {{-- <link rel="stylesheet" href="../../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
     <link rel="stylesheet" href="../../assets/vendor/libs/typeahead-js/typeahead.css" />
     <link rel="stylesheet" href="../../assets/vendor/libs/datatables-bs5/datatables.bootstrap5.css" />
     <link rel="stylesheet" href="../../assets/vendor/libs/datatables-responsive-bs5/responsive.bootstrap5.css" />
     <link rel="stylesheet" href="../../assets/vendor/libs/datatables-checkboxes-jquery/datatables.checkboxes.css" />
     <link rel="stylesheet" href="../../assets/vendor/libs/datatables-buttons-bs5/buttons.bootstrap5.css" />
-    <link rel="stylesheet" href="../../assets/vendor/libs/flatpickr/flatpickr.css" />
+    <link rel="stylesheet" href="../../assets/vendor/libs/flatpickr/flatpickr.css" /> --}}
 
 
     <!-- Row Group CSS -->
-    <link rel="stylesheet" href="../../assets/vendor/libs/datatables-rowgroup-bs5/rowgroup.bootstrap5.css" />
+   {{--  <link rel="stylesheet" href="../../assets/vendor/libs/datatables-rowgroup-bs5/rowgroup.bootstrap5.css" /> --}}
     <!-- Form Validation -->
-    <link rel="stylesheet" href="../../assets/vendor/libs/formvalidation/dist/css/formValidation.min.css" />
+    {{-- <link rel="stylesheet" href="../../assets/vendor/libs/formvalidation/dist/css/formValidation.min.css" /> --}}
 
 
 
@@ -75,7 +75,7 @@
     <div class="layout-wrapper layout-content-navbar">
         <div class="layout-container">
            
-            <x-partials.sidebar></x-partials.sidebar>
+            <x-partials.sidebar.sidebar></x-partials.sidebar.sidebar>
 
             <div class="layout-page">
                 <x-partials.header></x-partials.header>
@@ -131,7 +131,7 @@
     <script src="{{ asset('assets/vendor/libs/apex-charts/apexcharts.js') }}"></script>
 
 
-    <script src="../../assets/vendor/libs/datatables/jquery.dataTables.js"></script>
+   {{--  <script src="../../assets/vendor/libs/datatables/jquery.dataTables.js"></script>
     <script src="../../assets/vendor/libs/datatables-bs5/datatables-bootstrap5.js"></script>
     <script src="../../assets/vendor/libs/datatables-responsive/datatables.responsive.js"></script>
     <script src="../../assets/vendor/libs/datatables-responsive-bs5/responsive.bootstrap5.js"></script>
@@ -141,20 +141,20 @@
     <script src="../../assets/vendor/libs/jszip/jszip.js"></script>
     <script src="../../assets/vendor/libs/pdfmake/pdfmake.js"></script>
     <script src="../../assets/vendor/libs/datatables-buttons/buttons.html5.js"></script>
-    <script src="../../assets/vendor/libs/datatables-buttons/buttons.print.js"></script>
+    <script src="../../assets/vendor/libs/datatables-buttons/buttons.print.js"></script> --}}
 
     <!-- Flat Picker -->
-    <script src="../../assets/vendor/libs/moment/moment.js"></script>
-    <script src="../../assets/vendor/libs/flatpickr/flatpickr.js"></script>
+   {{--  <script src="../../assets/vendor/libs/moment/moment.js"></script>
+    <script src="../../assets/vendor/libs/flatpickr/flatpickr.js"></script> --}}
 
     <!-- Row Group JS -->
-    <script src="../../assets/vendor/libs/datatables-rowgroup/datatables.rowgroup.js"></script>
-    <script src="../../assets/vendor/libs/datatables-rowgroup-bs5/rowgroup.bootstrap5.js"></script>
+{{--     <script src="../../assets/vendor/libs/datatables-rowgroup/datatables.rowgroup.js"></script>
+    <script src="../../assets/vendor/libs/datatables-rowgroup-bs5/rowgroup.bootstrap5.js"></script> --}}
 
     <!-- Form Validation -->
-    <script src="../../assets/vendor/libs/formvalidation/dist/js/FormValidation.min.js"></script>
+ {{--    <script src="../../assets/vendor/libs/formvalidation/dist/js/FormValidation.min.js"></script>
     <script src="../../assets/vendor/libs/formvalidation/dist/js/plugins/Bootstrap5.min.js"></script>
-    <script src="../../assets/vendor/libs/formvalidation/dist/js/plugins/AutoFocus.min.js"></script>
+    <script src="../../assets/vendor/libs/formvalidation/dist/js/plugins/AutoFocus.min.js"></script> --}}
 
     <!-- Main JS -->
     <script src="{{ asset('assets/js/main.js') }}"></script>
