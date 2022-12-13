@@ -74,9 +74,7 @@
     <!-- Layout wrapper -->
     <div class="layout-wrapper layout-content-navbar">
         <div class="layout-container">
-           
             <x-partials.sidebar></x-partials.sidebar>
-
             <div class="layout-page">
                 <x-partials.header></x-partials.header>
                 <!-- Content wrapper -->
