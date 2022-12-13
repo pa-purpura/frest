@@ -1,3 +1,5 @@
+@section('title') HomePage @endsection
+
 <x-layout>
     <!-- Content -->
     <div class="container-xxl flex-grow-1 container-p-y">
