@@ -73,10 +73,8 @@
 <body>
     <!-- Layout wrapper -->
     <div class="layout-wrapper layout-content-navbar">
-        <div class="layout-container">
-           
+        <div class="layout-container">           
             <x-partials.sidebar.sidebar></x-partials.sidebar.sidebar>
-
             <div class="layout-page">
                 <x-partials.header></x-partials.header>
                 <!-- Content wrapper -->
