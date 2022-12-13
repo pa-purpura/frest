@@ -6,11 +6,13 @@
                     xmlns:xlink="http://www.w3.org/1999/xlink">
                     <title>icon</title>
                     <defs>
-                        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+                        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%"
+                            id="linearGradient-1">
                             <stop stop-color="#5A8DEE" offset="0%"></stop>
                             <stop stop-color="#699AF9" offset="100%"></stop>
                         </linearGradient>
-                        <linearGradient x1="0%" y1="0%" x2="100%" y2="100%" id="linearGradient-2">
+                        <linearGradient x1="0%" y1="0%" x2="100%" y2="100%"
+                            id="linearGradient-2">
                             <stop stop-color="#FDAC41" offset="0%"></stop>
                             <stop stop-color="#E38100" offset="100%"></stop>
                         </linearGradient>
@@ -37,7 +39,6 @@
             </span>
             <span class="app-brand-text demo menu-text fw-bold ms-2">Frest</span>
         </a>
-
         <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto">
             <i class="bx menu-toggle-icon d-none d-xl-block fs-4 align-middle"></i>
             <i class="bx bx-x d-block d-xl-none bx-sm align-middle"></i>
@@ -57,52 +58,34 @@
             </a>
             <ul class="menu-sub">
                 <li class="menu-item">
-                    <a href="index.html" class="menu-link">
-                        <div data-i18n="Analytics">Analytics</div>
-                    </a>
+                    <x-partials.sidebar.sidebar-item href='#item'>Item 1 </x-partials.sidebar.sidebar-item>
                 </li>
                 <li class="menu-item">
-                    <a href="dashboards-ecommerce.html" class="menu-link">
-                        <div data-i18n="eCommerce">eCommerce</div>
-                    </a>
+                    <x-partials.sidebar.sidebar-item href='#item'>Item 2</x-partials.sidebar.sidebar-item>
                 </li>
             </ul>
         </li>
         <li class="menu-item">
-            <a href="javascript:void(0);" class="menu-link menu-toggle">
-                <i class="menu-icon tf-icons bx bx-user"></i>
-                <div data-i18n="Anagrafiche">Anagrafiche</div>
-            </a>
+            <x-partials.sidebar.sidebar-button-list class="bx bx-user">Anagrafiche
+            </x-partials.sidebar.sidebar-button-list>
             <ul class="menu-sub">
-                {{-- <li class="menu-item">
-                    <a href="{{ route('admin.users.index' ,  $type = 'Dipendente') }}" class="menu-link">
-                        <div data-i18n="Clienti">Clienti</div>
-                    </a>
-                </li> --}}
-                {{-- <li class="menu-item">
-                    <a href="{{ route('admin.collaborators.index') }}" class="menu-link">
-                        <div data-i18n="Collaboratori">Collaboratori</div>
-                    </a>
-                </li> --}}
                 <li class="menu-item">
-                    <a href="{{-- {{ route('admin.users.index',  $type = 'Dipendente') }} --}}" class="menu-link">
-                        <div data-i18n="Dipendenti">Dipendenti</div>
-                    </a>
+                    <x-partials.sidebar.sidebar-item href='#item'>Item</x-partials.sidebar.sidebar-item>
                 </li>
-                {{-- <li class="menu-item">
-                    <a href="{{ route('admin.providers.index') }}" class="menu-link">
-                        <div data-i18n="Fornitori">Fornitori</div>
-                    </a>
-                </li> --}}
+                <li class="menu-item">
+                    <x-partials.sidebar.sidebar-item href='#item2'>Item 2</x-partials.sidebar.sidebar-item>
+                </li>
+                <li class="menu-item">
+                    <x-partials.sidebar.sidebar-item href='#item3'>Item 3</x-partials.sidebar.sidebar-item>
+                </li>
             </ul>
         </li>
         <!-- Apps & Pages -->
-        <li class="menu-header small text-uppercase"><span class="menu-header-text">Apps &amp; Pages</span>
+        <li class="menu-header small text-uppercase">
+            <x-partials.sidebar.sidebar-title-list>Apps &amp; Pages</x-partials.sidebar.sidebar-title-list>
         </li>
         <li class="menu-item">
-            <a href="app-calendar.html" class="menu-link">
-                <i class="menu-icon tf-icons bx bx-calendar"></i>
-                <div data-i18n="Calendar">Calendar</div>
-            </a>
+            <x-partials.sidebar.sidebar-item class="menu-icon tf-icons bx bx-calendar">Calendar
+            </x-partials.sidebar.sidebar-item>
         </li>
 </aside>
