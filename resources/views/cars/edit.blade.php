@@ -1,7 +1,7 @@
 <x-layout>
     <div hidden>
-        @if ( Request::url()==='http://127.0.0.1:8000/user/create' )
-        {{ $action='http://127.0.0.1:8000/user%27%7D%7D'}}
+        @if ( Request::url()==='http://127.0.0.1:8000/cars/create' )
+        {{ $action='http://127.0.0.1:8000/cars'}}
         {{ $method = 'POST'}}
         @else
         {{ $method='PATCH'}}
