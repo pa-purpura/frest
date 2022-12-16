@@ -8,14 +8,7 @@
 
       <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
         <!-- Search -->
-        <div class="navbar-nav align-items-center">
-          <div class="nav-item navbar-search-wrapper mb-0">
-            <a class="nav-item nav-link search-toggler px-0" href="javascript:void(0);">
-              <i class="bx bx-search-alt bx-sm"></i>
-              <span class="d-none d-md-inline-block text-muted">Search (Ctrl+/)</span>
-            </a>
-          </div>
-        </div>
+        <x-partials.header.header-search class="bx bx-search-alt bx-sm">Search (Ctrl+/)</x-partials.header.header-search>
         <!-- /Search -->
 
         <ul class="navbar-nav flex-row align-items-center ms-auto">
@@ -26,52 +19,31 @@
             </a>
             <ul class="dropdown-menu dropdown-menu-end">
               <li>
-                <a class="dropdown-item" href="javascript:void(0);" data-language="en">
-                  <i class="fi fi-us fis rounded-circle fs-4 me-1"></i>
-                  <span class="align-middle">English</span>
-                </a>
+                <x-partials.header.header-item data-language="en" class="fi fi-us fis rounded-circle fs-4 me-1">English</x-partials.header.header-item>
               </li>
               <li>
-                <a class="dropdown-item" href="javascript:void(0);" data-language="fr">
-                  <i class="fi fi-fr fis rounded-circle fs-4 me-1"></i>
-                  <span class="align-middle">French</span>
-                </a>
+                <x-partials.header.header-item data-language="fr" class="fi fi-fr fis rounded-circle fs-4 me-1">French</x-partials.header.header-item>
               </li>
               <li>
-                <a class="dropdown-item" href="javascript:void(0);" data-language="de">
-                  <i class="fi fi-de fis rounded-circle fs-4 me-1"></i>
-                  <span class="align-middle">German</span>
-                </a>
+                <x-partials.header.header-item data-language="de" class="fi fi-de fis rounded-circle fs-4 me-1">German</x-partials.header.header-item>
               </li>
               <li>
-                <a class="dropdown-item" href="javascript:void(0);" data-language="pt">
-                  <i class="fi fi-pt fis rounded-circle fs-4 me-1"></i>
-                  <span class="align-middle">Portuguese</span>
-                </a>
+                <x-partials.header.header-item data-language="pt" class="fi fi-pt fis rounded-circle fs-4 me-1">Portuguese</x-partials.header.header-item>
               </li>
             </ul>
           </li>
-          <!--/ Language -->
+          <!--/ Language --> {{-- FATTO --}}
 
-          <!-- Style Switcher -->
+          <!-- Style Switcher --> {{-- FATTO --}}
           <li class="nav-item me-2 me-xl-0">
-            <a class="nav-link style-switcher-toggle hide-arrow" href="javascript:void(0);">
-              <i class="bx bx-sm"></i>
-            </a>
+            <x-partials.header.header-button-dark  notification='1' class="bx bx-sm"></x-partials.header.header-button-dark>
           </li>
           <!--/ Style Switcher -->
 
           <!-- Quick links  -->
           <li class="nav-item dropdown-shortcuts navbar-dropdown dropdown me-2 me-xl-0">
-            <a
-              class="nav-link dropdown-toggle hide-arrow"
-              href="javascript:void(0);"
-              data-bs-toggle="dropdown"
-              data-bs-auto-close="outside"
-              aria-expanded="false"
-            >
-              <i class="bx bx-grid-alt bx-sm"></i>
-            </a>
+            <x-partials.header.header-dropdown message='' class="bx bx-grid-alt bx-sm"></x-partials.header.header-dropdown>
+
             <div class="dropdown-menu dropdown-menu-end py-0">
               <div class="dropdown-menu-header border-bottom">
                 <div class="dropdown-header d-flex align-items-center py-3">
@@ -158,16 +130,7 @@
 
           <!-- Notification -->
           <li class="nav-item dropdown-notifications navbar-dropdown dropdown me-3 me-xl-2">
-            <a
-              class="nav-link dropdown-toggle hide-arrow"
-              href="javascript:void(0);"
-              data-bs-toggle="dropdown"
-              data-bs-auto-close="outside"
-              aria-expanded="false"
-            >
-              <i class="bx bx-bell bx-sm"></i>
-              <span class="badge bg-danger rounded-pill badge-notifications">5</span>
-            </a>
+            <x-partials.header.header-dropdown message='5' class="bx bx-bell bx-sm"></x-partials.header.header-dropdown>
             <ul class="dropdown-menu dropdown-menu-end py-0">
               <li class="dropdown-menu-header border-bottom">
                 <div class="dropdown-header d-flex align-items-center py-3">
@@ -401,11 +364,7 @@
 
           <!-- User -->
           <li class="nav-item navbar-dropdown dropdown-user dropdown">
-            <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
-              <div class="avatar avatar-online">
-                <img src="../../assets/img/avatars/1.png" alt class="rounded-circle" />
-              </div>
-            </a>
+            <x-partials.header.header-dropdown-avatar src="../../assets/img/avatars/1.png" alt="avatar"  class="bx bx-grid-alt bx-sm"></x-partials.header.header-dropdown-avatar>
             <ul class="dropdown-menu dropdown-menu-end">
               <li>
                 <a class="dropdown-item" href="pages-account-settings-account.html">

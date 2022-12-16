@@ -76,7 +76,7 @@
         <div class="layout-container">           
             <x-partials.sidebar.sidebar></x-partials.sidebar.sidebar>
             <div class="layout-page">
-                <x-partials.header></x-partials.header>
+                <x-partials.header.header></x-partials.header.header>
                 <!-- Content wrapper -->
                 <div class="content-wrapper">
                     <div hidden>
