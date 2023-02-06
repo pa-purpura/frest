@@ -25,7 +25,7 @@ class SetLanguage
         }
 
         app()->setLocale($locale);
-
+        // dd($locale);
         return $next($request);
     }
 }

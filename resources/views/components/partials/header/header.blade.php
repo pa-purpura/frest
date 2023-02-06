@@ -5,31 +5,50 @@
           <i class="bx bx-menu bx-sm"></i>
         </a>
       </div>
+      @php
+          // app()->setLocale('it')
+          // $local= app()->getLocale()
+      @endphp
 
+      {{-- @dd($local ) --}}
       <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
         <!-- Search -->
         <x-partials.header.header-search class="bx bx-search-alt bx-sm">Search (Ctrl+/)</x-partials.header.header-search>
         <!-- /Search -->
-
+        
         <ul class="navbar-nav flex-row align-items-center ms-auto">
           <!-- Language -->
           <li class="nav-item dropdown-language dropdown me-2 me-xl-0">
-            <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
-              <i class="fi fi-us fis rounded-circle fs-3 me-1"></i>
-            </a>
+            <div class="nav-link dropdown-toggle hide-arrow"  data-bs-toggle="dropdown">
+              @switch( app()->getLocale() )
+              @case('en')
+              <i class="fi fi-gb fis rounded-circle fs-3 me-1" ></i>
+              @break
+              @case('it')
+              <i class="fi fi-it fis rounded-circle fs-3 me-1" ></i>
+              @break
+              @default
+              @endswitch
+            </div>
             <ul class="dropdown-menu dropdown-menu-end">
               <li>
-                <x-partials.header.header-item data-language="en" class="fi fi-us fis rounded-circle fs-4 me-1">English</x-partials.header.header-item>
+                <a class="dropdown-item" href="{{ url(getCurrentUrlWithLocale('en')) }}">
+                  <i class="fi fi-gb fis rounded-circle fs-3 me-1" ></i>
+                  <span class="align-middle">English</span>
+                </a>
               </li>
               <li>
-                <x-partials.header.header-item data-language="fr" class="fi fi-fr fis rounded-circle fs-4 me-1">French</x-partials.header.header-item>
+                <a class="dropdown-item" href="{{ url(getCurrentUrlWithLocale('it')) }}">
+                  <i class="fi fi-it fis rounded-circle fs-3 me-1" ></i>
+                  <span class="align-middle">italiano</span>
+                </a>
               </li>
               <li>
-                <x-partials.header.header-item data-language="de" class="fi fi-de fis rounded-circle fs-4 me-1">German</x-partials.header.header-item>
-              </li>
-              <li>
-                <x-partials.header.header-item data-language="pt" class="fi fi-pt fis rounded-circle fs-4 me-1">Portuguese</x-partials.header.header-item>
-              </li>
+                <a class="dropdown-item"  href="{{ url(getCurrentUrlWithLocale('fr')) }}">
+                  <i class="fi fi-fr fis rounded-circle fs-3 me-1" ></i>
+                  <span class="align-middle">francais</span>
+                </a>
+              </li>              
             </ul>
           </li>
           <!--/ Language --> {{-- FATTO --}}

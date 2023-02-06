@@ -34,9 +34,7 @@ class RouteServiceProvider extends ServiceProvider
                 ->group(base_path('routes/api.php'));
 
             $locale = request()->segment(1);
-            // $locale = 'test';
-            // dump($locale);
-
+            
             Route::middleware('web')
                 ->prefix($locale)
                 ->group(base_path('routes/web.php'));
