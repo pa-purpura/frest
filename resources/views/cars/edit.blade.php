@@ -1,4 +1,4 @@
-<x-layout>
+<x-app>
     <div hidden>
         @if ( Request::url()==='http://127.0.0.1:8000/cars/create' )
         {{ $action='http://127.0.0.1:8000/cars'}}
@@ -47,4 +47,4 @@
             </x-form.form>
         </div>
     </div>
-</x-layout>
+</x-app>
