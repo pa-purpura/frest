@@ -75,7 +75,7 @@ class CarController extends Controller
         $car = Car::findOrFail(1);
         $car->fill($request->all());
         $car->save();
-        return redirect()->route('cars.index')->with('success', 'Action completed');
+        return redirect()->route('cars.index')->with('success', __('item.created'));
     }
 
     /**

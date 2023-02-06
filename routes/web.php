@@ -15,15 +15,22 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
 Route::get('/', function () {
     return view('welcome');
 });
+
+
 
 // Route::prefix('dashboard')->name('dashboard.')->middleware('auth')->group(function () {
 Route::prefix('dashboard')->name('dashboard.')->group(function () {
     Route::view('/','index')->name('dashboard');
 
-
+    Route::get('/test', function () {
+        app()->setLocale('en');
+        dd(app()->getLocale());
+        // dd('prova');
+    });
     // GET|HEAD        4dmin ........................admin.dashboard
     // GET|HEAD        4dmin/User ...................admin.user.index › UserController@index
     // POST            4dmin/User ...................admin.user.store › UserController@store
