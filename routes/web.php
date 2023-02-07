@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CarController;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -24,21 +25,23 @@ Route::get('/', function () {
 
 // Route::prefix('dashboard')->name('dashboard.')->middleware('auth')->group(function () {
 Route::prefix('dashboard')->name('dashboard.')->group(function () {
+
     Route::view('/','index')->name('dashboard');
+    Route::resource('users', UserController::class);
 
     Route::get('/test', function () {
         app()->setLocale('en');
         dd(app()->getLocale());
         // dd('prova');
     });
-    // GET|HEAD        4dmin ........................admin.dashboard
-    // GET|HEAD        4dmin/User ...................admin.user.index › UserController@index
-    // POST            4dmin/User ...................admin.user.store › UserController@store
-    // GET|HEAD        4dmin/User/create ............admin.user.create › UserController@create
-    // GET|HEAD        4dmin/User/{User} ............admin.user.show › UserController@show
-    // PUT|PATCH       4dmin/User/{User} ............admin.user.update › UserController@update
-    // DELETE          4dmin/User/{User} ............admin.user.destroy › UserController@destroy
-    // GET|HEAD        4dmin/User/{User}/edit .......admin.user.edit › UserController@edit
+
+    // GET|HEAD        dashboard/users ...........  .. dashboard.users.index › UserController@index
+    // POST            dashboard/users ............... dashboard.users.store › UserController@store
+    // GET|HEAD        dashboard/users/create ........ dashboard.users.create › UserController@create
+    // GET|HEAD        dashboard/users/{user} ........ dashboard.users.show › UserController@show
+    // PUT|PATCH       dashboard/users/{user} ........ dashboard.users.update › UserController@update
+    // DELETE          dashboard/users/{user} ........ dashboard.users.destroy › UserController@destroy
+    // GET|HEAD        dashboard/users/{user}/edit ... dashboard.users.edit › UserController@edit
 
 });
 
