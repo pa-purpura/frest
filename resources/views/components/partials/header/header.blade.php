@@ -17,6 +17,7 @@
         <!-- /Search -->
         
         <ul class="navbar-nav flex-row align-items-center ms-auto">
+
           <!-- Language -->
           <li class="nav-item dropdown-language dropdown me-2 me-xl-0">
             <div class="nav-link dropdown-toggle hide-arrow"  data-bs-toggle="dropdown">
@@ -34,21 +35,39 @@
               <li>
                 <a class="dropdown-item" href="{{ url(getCurrentUrlWithLocale('en')) }}">
                   <i class="fi fi-gb fis rounded-circle fs-3 me-1" ></i>
-                  <span class="align-middle">English</span>
+                  <span class="align-middle">ENGLISH</span>
                 </a>
               </li>
               <li>
                 <a class="dropdown-item" href="{{ url(getCurrentUrlWithLocale('it')) }}">
                   <i class="fi fi-it fis rounded-circle fs-3 me-1" ></i>
-                  <span class="align-middle">italiano</span>
+                  <span class="align-middle">ITALIANO</span>
                 </a>
               </li>
               <li>
                 <a class="dropdown-item"  href="{{ url(getCurrentUrlWithLocale('fr')) }}">
                   <i class="fi fi-fr fis rounded-circle fs-3 me-1" ></i>
-                  <span class="align-middle">francais</span>
+                  <span class="align-middle">FRANÇAIS</span>
                 </a>
-              </li>              
+              </li>
+              <li>
+                <a class="dropdown-item"  href="{{ url(getCurrentUrlWithLocale('es')) }}">
+                  <i class="fi fi-es fis rounded-circle fs-3 me-1" ></i>
+                  <span class="align-middle">ESPAÑOL</span>
+                </a>
+              </li>   
+              <li>
+                <a class="dropdown-item"  href="{{ url(getCurrentUrlWithLocale('de')) }}">
+                  <i class="fi fi-de fis rounded-circle fs-3 me-1" ></i>
+                  <span class="align-middle">DEUTSCH</span>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item"  href="{{ url(getCurrentUrlWithLocale('pt')) }}">
+                  <i class="fi fi-pt fis rounded-circle fs-3 me-1" ></i>
+                  <span class="align-middle">PORTUGUÊS</span>
+                </a>
+              </li>            
             </ul>
           </li>
           <!--/ Language --> {{-- FATTO --}}
