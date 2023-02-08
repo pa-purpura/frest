@@ -27,4 +27,19 @@
     
     
     </div>
+
+    @push('js')
+        <!-- Vendors JS -->
+        {{-- <script src="{{ asset('assets/vendor/libs/jquery/jquery.js') }}"></script> --}}
+        <script src="{{ asset('assets/vendor/libs/datatables/jquery.dataTables.js') }}"></script>
+        <script src="{{ asset('assets/vendor/libs/datatables-bs5/datatables-bootstrap5.js') }}"></script>
+        <script src="{{ asset('assets/vendor/libs/datatables-responsive/datatables.responsive.js') }}"></script>
+        <script src="{{ asset('assets/vendor/libs/datatables-responsive-bs5/responsive.bootstrap5.js') }}"></script>
+        <!-- Flat Picker -->
+        {{-- <script src="{{ asset('assets/vendor/libs/moment/moment.js') }}"></script>
+        <script src="{{ asset('assets/vendor/libs/flatpickr/flatpickr.js') }}"></script> --}}
+        <!-- Page JS -->
+        <script src="{{ asset('assets/js/tables-datatables-advanced.js') }}"></script>
+    @endpush
+
 </x-app>
