@@ -2,7 +2,7 @@
 Users
 @endsection
 
-<x-app>   
+<x-app>
     @push('css')
     <link rel="stylesheet" href="{{ asset('assets/vendor/libs/datatables-bs5/datatables.bootstrap5.css') }}" />
     {{-- <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.2/css/jquery.dataTables.css"> --}}
@@ -10,13 +10,13 @@ Users
 
 
     <div class="container-xxl flex-grow-1 container-p-y">
-      
+
         <!--  title and buttons and cards -->
         <div class="card mb-3">
             <div class="card-header d-inline-flex justify-content-between align-items-baseline">
                 <h5 > Users</h5>
                 <button type="button" class="btn  btn-label-primary">+ user</button>
-            </div>           
+            </div>
         </div>
          <!-- Hoverable Table rows -->
          <div class="card ">
@@ -80,22 +80,22 @@ Users
                             </button>
                             <div class="dropdown-menu">
                               <a class="dropdown-item" href=""><i class="bx bx-edit-alt me-1"></i> Edit</a>
-                              <a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-show me-1"></i> show</a>
+                              <a class="dropdown-item" href="{{ route('dashboard.users.show', $user) }}"><i class="bx bx-show me-1"></i> show</a>
 
                               <form method="POST"  action="{{route('dashboard.users.destroy', $user)}}">
                                     @csrf
                                     @method("DELETE")
-                                    <button type="submit" class="dropdown-item" ><i class="bx bx-trash me-1"></i> Delete</button>                                                
+                                    <button type="submit" class="dropdown-item" ><i class="bx bx-trash me-1"></i> Delete</button>
                                 </form>
                               {{-- <a class="dropdown-item" href="{{ route('dashboard.users.destroy', $user->id)}}"><i class="bx bx-trash me-1"></i> Delete</a> --}}
                             </div>
                           </div>
                         </td>
                       </tr>
-                        
+
                     @endforeach
-                  
-                
+
+
                 </tbody>
               </table>
             </div>
@@ -104,18 +104,18 @@ Users
     </div>
 
     @push('js')
-   
+
         {{-- <script src="{{ asset('assets/vendor/libs/datatables/jquery.dataTables.js') }}"></script> --}}
         {{-- <script src="//cdn.datatables.net/1.13.2/js/jquery.dataTables.min.js"></script> --}}
         <script src="https://code.jquery.com/jquery-3.6.1.min.js"
         integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
-        
+
         <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.13.2/js/jquery.dataTables.js"></script>
-        <script> 
+        <script>
              $(document).ready( function () {
                         $('#this_table').DataTable();
              } );
-        </script>             
+        </script>
 
     @endpush
 
