@@ -1,3 +1,7 @@
+@section('title')
+Users
+@endsection
+
 <x-app>   
     @push('css')
     <link rel="stylesheet" href="{{ asset('assets/vendor/libs/datatables-bs5/datatables.bootstrap5.css') }}" />
@@ -23,7 +27,7 @@
               <table id="this_table" class="table table-hover table-bordered">
                 <thead>
                   <tr>
-                    <th>Project</th>
+                    <th>{{__('table.project')}}</th>
                     <th>Client</th>
                     <th>Users</th>
                     <th>Status</th>
@@ -34,6 +38,7 @@
                     @foreach ($users as $user)
                     <tr>
                         <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong>Angular Project</strong></td>
+                        <td>{{$user->id}}</td>
                         <td>{{$user->name}}</td>
                         <td>{{$user->email}}</td>
                         <td>
