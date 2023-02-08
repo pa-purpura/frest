@@ -37,15 +37,11 @@
     <!-- Vendors CSS -->
     <link rel="stylesheet" href="{{ asset('assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css') }}" />
     <link rel="stylesheet" href="{{ asset('assets/vendor/libs/typeahead-js/typeahead.css') }}" />
-    <link rel="stylesheet" href="{{ asset('assets/vendor/libs/apex-charts/apex-charts.css') }}" />
+    {{-- <link rel="stylesheet" href="{{ asset('assets/vendor/libs/apex-charts/apex-charts.css') }}" /> --}}
 
-    {{-- <link rel="stylesheet" href="../../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
-    <link rel="stylesheet" href="../../assets/vendor/libs/typeahead-js/typeahead.css" />
-    <link rel="stylesheet" href="../../assets/vendor/libs/datatables-bs5/datatables.bootstrap5.css" />
-    <link rel="stylesheet" href="../../assets/vendor/libs/datatables-responsive-bs5/responsive.bootstrap5.css" />
-    <link rel="stylesheet" href="../../assets/vendor/libs/datatables-checkboxes-jquery/datatables.checkboxes.css" />
-    <link rel="stylesheet" href="../../assets/vendor/libs/datatables-buttons-bs5/buttons.bootstrap5.css" />
-    <link rel="stylesheet" href="../../assets/vendor/libs/flatpickr/flatpickr.css" /> --}}
+   
+    
+    <link rel="stylesheet" href="../../assets/vendor/libs/flatpickr/flatpickr.css" /> 
 
 
     <!-- Row Group CSS -->
@@ -59,13 +55,14 @@
 
 
     <!-- Page CSS -->
+    @stack('css')
 
     <!-- Helpers -->
     <script src="{{ asset('assets/vendor/js/helpers.js') }}"></script>
 
     <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
     <!--? Template customizer: To hide customizer set displayCustomizer value false in config.js.  -->
-    <script src="{{ asset('assets/vendor/js/template-customizer.js') }}"></script>
+    {{-- <script src="{{ asset('assets/vendor/js/template-customizer.js') }}"></script> --}}
     <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
     <script src="{{ asset('assets/js/config.js') }}"></script>
 </head>
@@ -125,46 +122,8 @@
     <!-- Vendors JS -->
     {{-- <script src="{{ asset('assets/vendor/libs/apex-charts/apexcharts.js') }}"></script> --}}
 
-    <!-- Core JS -->
-    <!-- build:js assets/vendor/js/core.js -->
- 
-   
-    <!-- endbuild -->
 
-   
-
-    <!-- Main JS -->
-    <script src="../../assets/js/main.js"></script>
-
-    
-
-
-   {{--  <script src="../../assets/vendor/libs/datatables/jquery.dataTables.js"></script>
-    <script src="../../assets/vendor/libs/datatables-bs5/datatables-bootstrap5.js"></script>
-    <script src="../../assets/vendor/libs/datatables-responsive/datatables.responsive.js"></script>
-    <script src="../../assets/vendor/libs/datatables-responsive-bs5/responsive.bootstrap5.js"></script>
-    <script src="../../assets/vendor/libs/datatables-checkboxes-jquery/datatables.checkboxes.js"></script>
-    <script src="../../assets/vendor/libs/datatables-buttons/datatables-buttons.js"></script>
-    <script src="../../assets/vendor/libs/datatables-buttons-bs5/buttons.bootstrap5.js"></script>
-    <script src="../../assets/vendor/libs/jszip/jszip.js"></script>
-    <script src="../../assets/vendor/libs/pdfmake/pdfmake.js"></script>
-    <script src="../../assets/vendor/libs/datatables-buttons/buttons.html5.js"></script>
-    <script src="../../assets/vendor/libs/datatables-buttons/buttons.print.js"></script> --}}
-
-    <!-- Flat Picker -->
-   {{--  <script src="../../assets/vendor/libs/moment/moment.js"></script>
-    <script src="../../assets/vendor/libs/flatpickr/flatpickr.js"></script> --}}
-
-    <!-- Row Group JS -->
-{{--     <script src="../../assets/vendor/libs/datatables-rowgroup/datatables.rowgroup.js"></script>
-    <script src="../../assets/vendor/libs/datatables-rowgroup-bs5/rowgroup.bootstrap5.js"></script> --}}
-
-    <!-- Form Validation -->
- {{--    <script src="../../assets/vendor/libs/formvalidation/dist/js/FormValidation.min.js"></script>
-    <script src="../../assets/vendor/libs/formvalidation/dist/js/plugins/Bootstrap5.min.js"></script>
-    <script src="../../assets/vendor/libs/formvalidation/dist/js/plugins/AutoFocus.min.js"></script> --}}
-
-    <!-- Main JS -->
+       <!-- Main JS -->
     <script src="{{ asset('assets/js/main.js') }}"></script>
     <!-- Page JS -->
     {{-- <script src="{{ asset('assets/js/dashboards-analytics.js') }}"></script> --}}
