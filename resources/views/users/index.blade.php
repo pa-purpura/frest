@@ -100,12 +100,18 @@
     </div>
 
     @push('js')
+
         {{-- <script src="{{ asset('assets/vendor/libs/datatables/jquery.dataTables.js') }}"></script> --}}
         {{-- <script src="//cdn.datatables.net/1.13.2/js/jquery.dataTables.min.js"></script> --}}
         <script src="https://code.jquery.com/jquery-3.6.1.min.js"
-            integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 
         <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.13.2/js/jquery.dataTables.js"></script>
+        <script>
+             $(document).ready( function () {
+                        $('#this_table').DataTable();
+             } );
+        </script>
 
         <script>
             $(document).ready(function() {
