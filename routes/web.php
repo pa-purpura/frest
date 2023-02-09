@@ -3,6 +3,7 @@
 use App\Http\Controllers\CarController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ProfileController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,14 +22,16 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-
+Route::get('/provaShow', function () {
+    $user = Auth::user();
+    return view('users.show', compact('user'));
+});
 
 // Route::prefix('dashboard')->name('dashboard.')->middleware('auth')->group(function () {
 Route::prefix('dashboard')->name('dashboard.')->group(function () {
 
-    Route::view('/','index')->name('dashboard');
+    Route::view('/', 'index')->name('dashboard');
     Route::resource('users', UserController::class);
-
     Route::get('/test', function () {
         app()->setLocale('en');
         dd(app()->getLocale());
@@ -54,7 +57,7 @@ Route::middleware('auth')->group(function () {
 
 Route::resource('cars', CarController::class);
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';
 
 
 Route::get('/test', function () {

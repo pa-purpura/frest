@@ -6,13 +6,11 @@
                     xmlns:xlink="http://www.w3.org/1999/xlink">
                     <title>icon</title>
                     <defs>
-                        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%"
-                            id="linearGradient-1">
+                        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
                             <stop stop-color="#5A8DEE" offset="0%"></stop>
                             <stop stop-color="#699AF9" offset="100%"></stop>
                         </linearGradient>
-                        <linearGradient x1="0%" y1="0%" x2="100%" y2="100%"
-                            id="linearGradient-2">
+                        <linearGradient x1="0%" y1="0%" x2="100%" y2="100%" id="linearGradient-2">
                             <stop stop-color="#FDAC41" offset="0%"></stop>
                             <stop stop-color="#E38100" offset="100%"></stop>
                         </linearGradient>
@@ -70,18 +68,20 @@
             </x-partials.sidebar.sidebar-button-list>
             <ul class="menu-sub">
                 <li class="menu-item">
-                    <x-partials.sidebar.sidebar-item href="{{ route('dashboard.users.index') }}" >Users</x-partials.sidebar.sidebar-item>
+                    <x-partials.sidebar.sidebar-item href="{{ route('dashboard.users.index') }}">Users
+                    </x-partials.sidebar.sidebar-item>
                 </li>
                 <li class="menu-item">
                     <x-partials.sidebar.sidebar-item href='#item2'>Item 2</x-partials.sidebar.sidebar-item>
                 </li>
                 <li class="menu-item">
-                    <x-partials.sidebar.sidebar-item href='#item3'>Item 3</x-partials.sidebar.sidebar-item>
+                    <x-partials.sidebar.sidebar-item href="/en/provaShow">Item 3
+                    </x-partials.sidebar.sidebar-item>
                 </li>
             </ul>
         </li>
         <!-- Apps & Pages -->
-        <li class="menu-header small text-uppercase">
+        <li class=" menu-header small text-uppercase">
             <x-partials.sidebar.sidebar-title-list>Apps &amp; Pages</x-partials.sidebar.sidebar-title-list>
         </li>
         <li class="menu-item">
