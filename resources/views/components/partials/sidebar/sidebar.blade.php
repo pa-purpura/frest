@@ -75,7 +75,7 @@
                     <x-partials.sidebar.sidebar-item href='#item2'>Item 2</x-partials.sidebar.sidebar-item>
                 </li>
                 <li class="menu-item">
-                    <x-partials.sidebar.sidebar-item href="{{route('dashboard.users.show', Auth::user())}}">Item 3
+                    <x-partials.sidebar.sidebar-item href="/en/provaShow">Item 3
                     </x-partials.sidebar.sidebar-item>
                 </li>
             </ul>
